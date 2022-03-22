@@ -1,0 +1,144 @@
+ body{
+     margin: 0px;
+     padding: 0px;
+     /* background-color: aqua; */
+ }
+ 
+ nav {
+    height: 8vh;
+    background-color: rgb(11, 168, 230);
+    display: flex;
+    align-items: center;
+    
+}
+
+nav h1{
+    padding: 8px;
+}
+
+nav ul{
+    
+    display: flex;
+     list-style-type: none;
+     padding: 8px;
+   
+   
+}
+
+nav ul li{
+
+text-decoration: none;
+
+    margin: 1vw;
+    padding: 4px;
+   
+}
+
+.container{
+    
+    display: flex;
+    justify-content: center;
+
+    padding: 5vw;
+   
+
+}
+
+.container .gameContainer{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns:  repeat(3,10vw);
+   
+    border-radius: 5px;
+    
+  
+}
+
+ .box{
+    font-size: 8vw;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      border: 2px solid black;
+      color: black;
+}
+
+.container .gameContainer .box:hover{
+   
+     background-color: rgb(45, 179, 112);
+     opacity: 0.5;
+     cursor: pointer;
+}
+
+.container .infoContainer{
+    margin-left: 20px;
+    
+}
+
+.container .infoContainer p{
+    font-size: 2vw;
+    
+}
+.container .infoContainer span{
+    font-size: 20px;
+  
+}
+.container .infoContainer button{
+   
+    margin: 0 30px;
+   font-size: 20px;
+   padding: 10px;
+   background-color: rgb(11, 168, 230);
+   color: aliceblue;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+img{
+ 
+    width: 0;
+    transition: 1s ease-in-out;
+}
+
+.line{
+    height: 2px;
+    width: 0;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    /* transform: translate(-11vw,25vw) rotate(0deg); */
+    /* transform: translate(0vw,15vw) rotate(90deg); */
+    /* transform: translate(-11vw,15vw) rotate(135deg); */
+    /* transform: translate(-11vw,15vw) rotate(45deg); */
+    transition: width 1s ease-in-out;
+}
+
+
+    
+    
+
+
+@media screen and (max-width: 800px){
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .container .gameContainer{
+        margin-top: 50px;
+        margin-bottom: 25px;
+        
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns:  repeat(3,24vw);
+
+    }
+
+    .line{
+        width: 71vw;
+    transform: translate(1vw, 38vw) rotate(40deg);
+    }
+    
+}
